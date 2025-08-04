@@ -7,7 +7,7 @@ function waitFor(element, eventName) {
     const handler = (ev) => {
       if (!isSettled) {
         resolve(
-          `It was ${eventName} on the element: ${element.nodeName}, id: ${element.id}`,
+          `It was ${eventName} on the element: ${element.nodeName}, id: ${element.id}.`,
         );
         isSettled = true;
         element.removeEventListener(eventName, handler);
